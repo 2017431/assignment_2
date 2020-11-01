@@ -16,6 +16,7 @@ jobs:
 
     strategy:
       matrix:
+
         node-version: [12.19.0]
 
     steps:
@@ -30,3 +31,4 @@ jobs:
        working-directory: wowgrape
     - run: npm test
        working-directory: wowgrape
+
