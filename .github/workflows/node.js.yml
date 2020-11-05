@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ main ]
   pull_request:
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -25,8 +25,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-      working-directory: wowgrape
     - run: npm run build --if-present
-       working-directory: wowgrape
     - run: npm test
-       working-directory: wowgrape
